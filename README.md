@@ -150,7 +150,7 @@ The test suite exercises the numerical guards, CLI entry points, and recurrence 
 
 ## Versioning and releases
 
-The repository and Python package are named **fibkit**, without a version suffix. The package version lives in `pyproject.toml` (required for Python packaging), while release milestones are recorded as Git tags such as `v2.1.0` and on [GitHub Releases](https://github.com/SaridakisStamatisChristos/fibkit2.1.0/releases).
+The Python distribution and project are named **fibkit**, without a version suffix. GitHub repository renaming is independent of package versioning. The package version lives in `pyproject.toml` (required for Python packaging), while release milestones are recorded as Git tags such as `v2.1.0` and on [GitHub Releases](https://github.com/SaridakisStamatisChristos/fibkit2.1.0/releases).
 
 To publish a new GitHub release, update `[project].version` in `pyproject.toml`, document the change in `CHANGELOG.md`, commit, then create and push an annotated `vX.Y.Z` tag on that commit. The [release workflow](.github/workflows/release.yml) checks that the tag matches the package version, builds and tests the package, and attaches distribution artifacts to a GitHub Release. It does **not** publish to PyPI.
 

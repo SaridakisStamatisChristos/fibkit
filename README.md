@@ -1,6 +1,6 @@
 # fibkit
 
-[![CI](https://github.com/SaridakisStamatisChristos/fibkit2.1.0/actions/workflows/ci.yml/badge.svg)](https://github.com/SaridakisStamatisChristos/fibkit2.1.0/actions/workflows/ci.yml)
+[![CI](https://github.com/SaridakisStamatisChristos/fibkit/actions/workflows/ci.yml/badge.svg)](https://github.com/SaridakisStamatisChristos/fibkit/actions/workflows/ci.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
 
 Engineering-grade Fibonacci and Lucas toolkit for Python. **fibkit** combines mathematically sound implementations with production-friendly ergonomics so you can explore integer sequences, modular arithmetic, and general linear recurrences from a single package.
@@ -132,7 +132,7 @@ fibkit/
 
 1. Clone the repository and create a virtual environment:
    ```bash
-   git clone https://github.com/SaridakisStamatisChristos/fibkit2.1.0.git fibkit
+   git clone https://github.com/SaridakisStamatisChristos/fibkit.git fibkit
    cd fibkit
    python -m venv .venv
    source .venv/bin/activate
@@ -150,7 +150,7 @@ The test suite exercises the numerical guards, CLI entry points, and recurrence 
 
 ## Versioning and releases
 
-The Python distribution and project are named **fibkit**, without a version suffix. GitHub repository renaming is independent of package versioning. The package version lives in `pyproject.toml` (required for Python packaging), while release milestones are recorded as Git tags such as `v2.1.0` and on [GitHub Releases](https://github.com/SaridakisStamatisChristos/fibkit2.1.0/releases).
+The Python distribution and project are named **fibkit**, without a version suffix. GitHub repository renaming is independent of package versioning. The package version lives in `pyproject.toml` (required for Python packaging), while release milestones are recorded as Git tags such as `v2.1.0` and on [GitHub Releases](https://github.com/SaridakisStamatisChristos/fibkit/releases).
 
 To publish a new GitHub release, update `[project].version` in `pyproject.toml`, document the change in `CHANGELOG.md`, commit, then create and push an annotated `vX.Y.Z` tag on that commit. The [release workflow](.github/workflows/release.yml) checks that the tag matches the package version, builds and tests the package, and attaches distribution artifacts to a GitHub Release. It does **not** publish to PyPI.
 

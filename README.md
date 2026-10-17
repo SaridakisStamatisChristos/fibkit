@@ -1,4 +1,4 @@
-# fibkit 2.1.0
+# fibkit
 
 [![CI](https://github.com/SaridakisStamatisChristos/fibkit2.1.0/actions/workflows/ci.yml/badge.svg)](https://github.com/SaridakisStamatisChristos/fibkit2.1.0/actions/workflows/ci.yml)
 [![License: Apache-2.0](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](LICENSE)
@@ -117,24 +117,23 @@ These helpers share the same rigorous type validation as the Fibonacci utilities
 ## Project layout
 
 ```
-fibkit2.1.0/
-├── README.md               # This document
-├── LICENSE                 # Apache 2.0 license
-├── fibkit-2.1.0/
-│   ├── README.md           # Package README used by PyPI
-│   ├── CHANGELOG.md        # Release highlights
-│   ├── pyproject.toml      # Project metadata & build configuration
-│   ├── src/fibkit/         # Library sources (core engine, CLI, recurrences)
-│   └── tests/              # pytest suite covering API and CLI
-└── ...
+fibkit/
+├── .github/workflows/      # CI and tagged releases
+├── src/fibkit/             # Library sources and CLI
+├── tests/                  # pytest suite
+├── pyproject.toml          # Package metadata and build configuration
+├── README.md               # Project documentation and PyPI description
+├── CHANGELOG.md            # Release history
+├── .gitignore
+└── LICENSE                 # Apache 2.0 license
 ```
 
 ## Development
 
 1. Clone the repository and create a virtual environment:
    ```bash
-   git clone https://github.com/yourname/fibkit.git
-   cd fibkit2.1.0/fibkit-2.1.0
+   git clone https://github.com/SaridakisStamatisChristos/fibkit2.1.0.git fibkit
+   cd fibkit
    python -m venv .venv
    source .venv/bin/activate
    ```
@@ -149,9 +148,15 @@ fibkit2.1.0/
 
 The test suite exercises the numerical guards, CLI entry points, and recurrence helpers to ensure regressions are caught early.
 
+## Versioning and releases
+
+The repository and Python package are named **fibkit**, without a version suffix. The package version lives in `pyproject.toml` (required for Python packaging), while release milestones are recorded as Git tags such as `v2.1.0` and on [GitHub Releases](https://github.com/SaridakisStamatisChristos/fibkit2.1.0/releases).
+
+To publish a new GitHub release, update `[project].version` in `pyproject.toml`, document the change in `CHANGELOG.md`, commit, then create and push an annotated `vX.Y.Z` tag on that commit. The [release workflow](.github/workflows/release.yml) checks that the tag matches the package version, builds and tests the package, and attaches distribution artifacts to a GitHub Release. It does **not** publish to PyPI.
+
 ## Changelog
 
-See [`fibkit-2.1.0/CHANGELOG.md`](fibkit-2.1.0/CHANGELOG.md) for release notes and upgrade guidance.
+See [`CHANGELOG.md`](CHANGELOG.md) for release notes and upgrade guidance.
 
 ## License
 
